@@ -1,0 +1,70 @@
+/*ヘッダーについて*/
+.header{
+    padding-top: 20px;
+    border-bottom: 1px solid #ddd;
+}
+.header__inner{
+    max-width: 1230px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #222; /*カーソルをあわせたら薄くなるようにする*/
+    /*opacity:0.9;  写真と合わせて必要なら　ロゴが薄くならないか心配*/
+}
+.tab-navigation__inner{
+    display: flex;
+    align-items: center; /*真ん中じゃないので、ロゴが来たら調整必要*/
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: -10px;
+}
+.tab-navigation__link{
+    display: inline-block;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    border-bottom: 4px solid cornsilk; /*ボーダーいらないかも*/
+    color: cornsilk;
+    text-decoration: none;
+    transition: .25s;
+}
+.tab-navigation__link:focus,
+.tab-navigation__link:hover{
+    border-bottom-color: currentColor;
+    color: #d2b48c;
+}
+/*ここからは蛇足かもしれない*/
+.tab-navigation__link--coffeeMenue{
+    border-bottom-color: currentColor;
+    color: #d2b48c;
+    pointer-events: none;
+}
+/*フッターについて*/
+.footer{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #222;
+}
+.fotter--border-top-gray{
+border-top: 1px solid #777;
+}
+.footer__inner{
+    max-width:  1230px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.footer-copyright{
+    /*横幅に対しての割合で決定。幅が小さいと縦になる*/
+    /*スマフォ用のサイズ分け必要*/
+    display: inline-block;
+    margin-left: 45%;
+    margin-right: 45%;
+    width: 10%;
+    /*text-align: center;ダメ*/
+    color: cornsilk;
+
+}
