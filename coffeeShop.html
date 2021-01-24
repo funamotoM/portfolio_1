@@ -34,8 +34,89 @@
         </div>
 
     </head>
-    <main>
-        <img src="" alt="トップ背景">
+    <main class="main">
+        <section class="top-content">
+            <div class="top-content_wrapper">
+                <img class="top-content_image"  src="img/top_phot.jpg" alt="トップ背景">
+                <div class="top-content_inner">
+                <h1 class="top-content_topic">LANA cafe</h1>
+                <p class="top-content_text">洗練された  珈琲時間を</p>
+                </div>
+            </div>
+        </section>
+        <section class="main-content">
+            <div class="main-content_wrapper">
+                <div class="main-content_inner">
+                    <div class="col" ontouchstart="this.classList.toggle('hover');">
+                        <!--ontouchstart属性はスマホで立ちしたらホバーの時のようなイベントが起きる！
+                            色々な箇所にhoverクラスがある場合は全体を囲ったブロック要素に記述しておけば、
+                            対応領域はそのブロック全てになる。start属性の要素は空指定でいいみたいです-->
+                        <div class="container">
+                            <div class="front" style="background-image:url(https://unsplash.it/500/500/)">
+                            <div class="inner">
+                                <p>Diligord</p>
+                                <span>lorem ipsum</span>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <p>Lorem ipsum,dolor </p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col" ontouchstart="this.classList.toggle('hover');">
+                        <div class="container">
+                            <div class="front" style="url(https://unsplash.it/511/511/)">
+                            <div class="inner">
+                                <p>Rocogged</p>
+                                <span>Lorem ipsum</span>
+                            </div>
+                            </div>
+                            <div class="back">
+                                <div class="inner">
+                                    <p>どうでもいい文書だよ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col_2" ontouchstart="this.classList.toggle('hover');">
+                        <div class="container">
+                            <div class="front" style="background-image:url(https://unsplash.it/502/502/);">
+                            <div class="inner">
+                                <p>Strizzes</p>
+                                <span>Lorem ipsum</span>
+                            </div>
+                            </div>
+                            <div class="back">
+                                <div class="inner">
+                                    <p>でも、どうでもいい文章だから</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col_3" ontouchstart="this.classList.toggle('hover');">
+                        <div class="container">
+                            <div class="front" style="background-image:url(https://unsplash.it/503/503/)">
+                            <div class="inner">
+                                <p>Clossyo</p>
+                                <span>Lorem ipsum</span>
+                            </div>
+                            </div>
+                            <div class="back">
+                                <div class="inner">
+                                    <p>やっぱり、どうでもいい文章</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section>
+
+        </section>
     </main>
     <footer>
         <div class="footer">

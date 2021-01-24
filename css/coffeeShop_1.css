@@ -41,8 +41,240 @@
     color: #d2b48c;
     pointer-events: none;
 }
+
+/*メインコンテンツについて*/
+.main{
+    max-width: 1230px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*メインのトップコンテンツについて*/
+.top-content{
+    display: block;
+    margin-top: 10px;
+    padding: 0;
+    max-width: 1230px;
+    /*object-fit: cover;*/
+    margin-left: auto;
+    margin-right: auto;
+    /*background-size: cover:?
+    /*background-image: url("img/top_phot.jpg");*/
+}
+.top-content_wrapper{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    left: -15px;
+    max-width: 1230px;
+}
+.top-content_image{
+    width: 1230px;
+    height: 400px;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+}
+.top-content_inner{
+    position: absolute;
+    top: 100px;
+    left: 30%;
+    width: 600px;
+    height: 200px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color:  #d2b48c;
+    z-index: 2;
+}
+.top-content_topic{
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 10px;
+    border-bottom: 4px solid cornsilk;
+    line-height: 70px;
+}
+.top-content_text{
+    text-align: center;
+    color:  cornsilk;
+    font-size: 1.5rem;
+    line-height: 70px;
+    letter-spacing: 15px;
+}
+/*メインのメインコンテンツについて*/
+.main-content{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 1230px;
+    top: -10px;
+    left: -15px;
+
+}
+.main-content_wrapper{
+
+    margin: 0;
+    padding: 0;
+    width: 1230px;
+    height: 350px;
+    top: -10px;
+    left: -15px;
+    background-color:  cornsilk;
+}
+/*フリップのコードはこちらから*/
+.col{
+    display: inline-block;
+    width: calc(24% - 2rem);/*cssで計算するやつ*/
+    margin: 1rem;
+    cursor: pointer;
+}
+.container{
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    /*transform-styleプロパティは、このプロパティを指定した要素の子要素が3D空間の中で
+    フラットに（平らに）描画されるか立体的に描画されるかを指定する際に使用
+    指定できる値は、flat と preserve-3d のいずれかで、初期値は flat*/
+    /*要素に transform-style:preserve-3d; を指定すると、
+    transform-style:flat;を指定した要素の子要素は、フラット化されずに3D空間の中でのそれらの位置を維持*/
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    /*perspectiveプロパティは、要素にtransform効果を適用するときの奥行きの深さを指定する際に使用。
+    奥行きの深さは数値で指定。初期値は none*/
+}
+.front, .back{
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
+    border-radius: 10px;
+    background-position: center;
+    /*それぞれの背景画像の初期位置を設定。位置は background-originで設定された位置レイヤーからの相対*/
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4,0.2,0.2,1);
+    transition: -webkit-transform .7s cubic-bezier(0.4,0.2,0.2,1);
+    -o-transition: transform .7s cubic-bezier(0.4,0.2,0.2,1);
+    transition: transform .7s cubic-bezier(0.4,0.2,0.2,1);
+    transition: transform cubic-bezier(0.4,0.2,0.2,1),-webkit-transform .7s cubic-bezier(0.4,0.2,0.2,1);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /*backface-visibilityは要素がユーザーに対して裏側を向いたときに、裏面を可視にするかどうかを設定
+    要素の裏面は表面の鏡像。裏面は二次元では可視ではない、三次元空間で要素に回転の変換が行われたときに
+    背面を見ることができる。このプロパティは、遠近感を持たない二次元の変換では効果がない*/
+    text-align: center;
+    min-height: 280px;
+    height: auto;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.5rem;
+}
+.back{
+    background: #cedce7;
+    background: -webkit-linear-gradient(45deg, #cedce7 0%,#596a72 100%);
+    background: -o-linear-gradient(45deg, #cedce7 0%,#596a72 100%);
+    background: linear-gradient(45deg, #cedce7 0%,#596a72 100%);
+}
+.front:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    opacity: .6;
+    background-color: #000;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+.container:hover .front,
+.container:hover .back{
+    -webkit-transition: -webkit-transform .7 cubic-bezier(0.4,0.2,0.2,1);
+    transition: -webkit-transform .7 cubic-bezier(0.4,0.2,0.2,1);
+    -o-transition: transform .7 cubic-bezier(0.4,0.2,0.2,1);
+    transition: transform .7 cubic-bezier(0.4,0.2,0.2,1);
+    transition: transform .7 cubic-bezier(0.4,0.2,0.2,1),-webkit-transform .7s cubic-bezier(0.4,0.2,0.2,1);
+}
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.inner{
+    -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+    transform: translateY(-50%) translateZ(60%) scale(0.94);
+    top: 50%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: 1px solid transparent;
+    /*utlineプロパティは、アウトラインのスタイル・太さ・色をまとめて指定する際に使用。
+    スタイル・太さ・色のうち、指定する値を任意の順序でスペースで区切って記述
+    outlineプロパティには上下左右の概念はない。
+    アウトラインをつける（縁取りをする）対象が丸い場合には、アウトラインも丸くなる*/
+    -webkit-perspective: inherit;
+    perspective: inherit;
+    /*inherit は CSS のキーワードで、要素のプロパティの計算値を親要素から取得するよう指定できる*/
+    z-index: 2;
+}
+.container .back{
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.container .front{
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.container:hover .back{
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.container:hover .front{
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.front .inner p{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+.front .inner p:after{
+    content: '';
+    width: 4rem;
+    height: 2px;
+    position: absolute;
+    background: #c6d4df;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -.75rem;
+}
+.front .inner span{
+    color: rgba(255, 255, 255, 0.7);
+    /*font-family: 'Montserrat';*/
+    font-weight: 300;
+}
+/*フリップのコードはここまで*/
+
 /*フッターについて*/
 .footer{
+    margin-top: -10px;
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: #222;
@@ -66,5 +298,4 @@ border-top: 1px solid #777;
     width: 10%;
     /*text-align: center;ダメ*/
     color: cornsilk;
-
 }
