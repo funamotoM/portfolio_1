@@ -18,6 +18,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: -10px;
+    padding-top: 18px;
 }
 .tab-navigation__link{
     display: inline-block;
@@ -95,9 +96,9 @@
 .top-content_topic{
     text-align: center;
     font-size: 2.5rem;
-    letter-spacing: 10px;
+    letter-spacing: 10px;/*文字間を間をあけるよ*/
     border-bottom: 4px solid cornsilk;
-    line-height: 70px;
+    line-height: 70px;?/*文の間隔をけるよ*/
 }
 .top-content_text{
     text-align: center;
@@ -119,7 +120,8 @@
 .main-content_wrapper{
 
     margin: 0;
-    padding: 0;
+    padding-top: 20px;
+    padding-left: 25px;
     width: 1230px;
     height: 350px;
     top: -10px;
@@ -166,14 +168,16 @@
     min-height: 280px;
     height: auto;
     border-radius: 10px;
-    color: #fff;
+    color: cornsilk;
     font-size: 1.5rem;
 }
 .back{
+    letter-spacing: 0.3rem;
+    line-height: 3rem;
     background: #cedce7;
-    background: -webkit-linear-gradient(45deg, #cedce7 0%,#596a72 100%);
-    background: -o-linear-gradient(45deg, #cedce7 0%,#596a72 100%);
-    background: linear-gradient(45deg, #cedce7 0%,#596a72 100%);
+    background: -webkit-linear-gradient(90deg, cornsilk 0%, #4d2312 100%);
+    background: -o-linear-gradient(90deg, cornsilk 0%#4d2312 100%);
+    background: linear-gradient(90deg, cornsilk 0%#4d2312 100%);
 }
 .front:after{
     position: absolute;
@@ -184,7 +188,7 @@
     height: 100%;
     content: '';
     display: block;
-    opacity: .6;
+    opacity: 0.3; /*表面の写真の透明度*/
     background-color: #000;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -274,7 +278,10 @@
 
 /*フッターについて*/
 .footer{
+    max-width: 1230px;
     margin-top: -10px;
+    margin-right: auto;
+    margin-left: auto;
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: #222;
