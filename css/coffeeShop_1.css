@@ -283,7 +283,30 @@
     font-weight: 300;
 }
 /*フリップのコードはここまで*/
-
+/*珈琲豆のコンテンツはここから*/
+.beans-Content-Wrapper{
+    padding-bottom: 20px;/*フッターとの間*/
+    margin-bottom: 10px;/*これ以上だとフッターの間に空白が出る*/
+    background-color: cornsilk;/*いらないかも*/
+}
+.beansImg_wrap{
+    width: 250px;
+    height: 250px;
+    margin-left: 20%;/*とりあえずの値*/
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  .beansImg_wrap img{
+    width: 100%;
+    cursor: pointer;
+    border-radius: 50%;
+    transition-duration: 0.3s;
+  }
+  .beansImg_wrap img:hover{
+    border-radius: 0;
+    transition-duration: 0.3s;
+  }
+/*珈琲豆のコンテンツはここから*/
 /*フッターについて*/
 .footer{
     /*max-width: 1230px;*/
